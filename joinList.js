@@ -25,7 +25,7 @@ const joinList = function(arr) {
     string += arr[i] + ', ';
   }
   //outputting the new string without the last comma
-  return string.substring(0, string.length - 2);
+  return string.substring(1, string.length - 2);
 }
 // Test / Driver Code below...
 
