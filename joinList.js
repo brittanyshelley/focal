@@ -11,7 +11,12 @@
 
 // Write our function (we must define it too!) below
 // ...
-const joinList = function(arr)
+const joinList = function(arr) {
+  if (arr.length === 0) {
+    return "";
+  }
+  
+}
 // Test / Driver Code below...
 const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
 const concepts = joinList(conceptList);
