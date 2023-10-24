@@ -11,13 +11,24 @@
 
 // Write our function (we must define it too!) below
 // ...
+const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
+const conceptList2 = []
+
 const joinList = function(arr) {
+  let string = ' ';
+  //Checking if string is empty and returning an empty string if it is
   if (arr.length === 0) {
     return "";
   }
-  
+  //iterating through the string and adding a cooma and space after each item
+  for (var i = 0; i < arr.length; i++) {
+    string += arr[i] + ', ';
+  }
+  //outputting the new string without the last comma
+  return string.substring(0, string.length - 2);
 }
 // Test / Driver Code below...
-const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
+
 const concepts = joinList(conceptList);
+const concepts2 = joinList(conceptList2);
 console.log(`Today I learned about ${concepts}.`);
