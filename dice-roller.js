@@ -1,19 +1,13 @@
-var dice = {
-  sides: 6,
-  roll: function () {
-    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-    return randomNumber;
+let diceRolls = process.argv[2];
+let result = "";
+function diceRoll(diceRolled) {
+  for(let i = 1; i <= diceRolled; i++) {
+    if(i == diceRolled) {
+      result += Math.floor(Math.random() * 6 + 1);
+    } else {
+      result += Math.floor(Math.random() * 6 + 1) + ", ";
+    }
   }
+  return result;
 }
-
-function printNumber(number) {
-  var placeholder = document.getElementById('placeholder');
-  placeholder.innerHTML = number;
-}
-
-var button = document.getElementById('button');
-
-button.onclick = function() {
-  var result = dice.roll();
-  printNumber(result);
-};
+console.log("Dice rolled:", diceRoll(diceRolls));
